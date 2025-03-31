@@ -440,7 +440,7 @@ In essence, ZeRO-Offload is a memory-saving technique that trades off computatio
 |通訊|資料根據需要（由箭頭指示）在GPU和CPU之間傳輸。|
 |優點|透過卸載優化器來減少GPU記憶體使用量，從而可以訓練否則無法容納在GPU上的模型。|
 
-|優化器 + 模型參數卸載||\\\
+|優化器 + 模型參數卸載||
 |-|-|
 |過程|優化器狀態和模型參數（LLM 16位元）都被移動到CPU RAM。只有梯度保留在GPU上。|
 |通訊|與僅優化器卸載相比，GPU和CPU之間傳輸的資料更多。|
