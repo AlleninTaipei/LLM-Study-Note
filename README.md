@@ -1,4 +1,4 @@
-# ASRock DeepTuner | Docs
+# LLM-Study-Note
 
 ---
 
