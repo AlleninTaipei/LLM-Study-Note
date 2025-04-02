@@ -16,6 +16,7 @@
 |Service #1 and Service #2|Represent external services that the Backend might need to interact with to fulfill the Client's request. These could be databases, other applications, or specialized functionalities.|
 
 |REST API Concept|right side|
+|-|-|
 |Client|Similar to the left side, it's the user or application making the request.|
 |HTTP (Hypertext Transfer Protocol)|The protocol used for communication over the internet. REST APIs typically use HTTP methods like GET, POST, PUT, DELETE to perform operations.|
 |URL (Uniform Resource Locator)|The address of the resource being requested or manipulated.|
