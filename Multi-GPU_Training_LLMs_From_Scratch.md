@@ -1,4 +1,4 @@
-# Multi-GPU_Training_LLMs_From_Scratch
+# Multi GPUs Training LLMs From Scratch
 
 > [Source: Using multiple GPUs to train large language models—introduced from scratch](https://youtu.be/mpuRca2UZtI?si=HDRdOCoXFYRoVPVz)
 
