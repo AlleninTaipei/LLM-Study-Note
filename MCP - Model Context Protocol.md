@@ -106,3 +106,283 @@ In essence, the diagram shows a client-server architecture where the MCP Server 
 * 主持人 Greg 最後問了一個問題，關於在 [MCP](https://www.anthropic.com/news/model-context-protocol) 這個協議普及之後，是否會像過去 HTTPS 或 SMTP 這樣的協議一樣，出現許多基於此協議的新創事業機會。他特別想知道這對於正在發展想法的聽眾是否有影響.
 
 * 來賓 Professor Ross Mike 回答說，對於技術人員來說，他認為有很多機會。他舉了一個免費的想法，那就是可以創建一個 [MCP App Store](https://www.mcpappstore.com/)。他觀察到現在有很多 MCP 伺服器的程式碼儲存庫在各處，如果有人可以創建一個網站，讓使用者能夠瀏覽這些 MCP 伺服器，看到 GitHub 程式碼，然後可以點擊「安裝」或「部署」，這樣伺服器就會部署並給他們一個特定的 URL，他們可以將這個 URL 貼到 MCP 客戶端並開始使用. 他半開玩笑地說，如果有人因為這個想法賺了數百萬，只需要給他一千美元就好. 對於非技術人員來說，他建議關注那些正在建立 MCP 功能的平台，並留意最終的標準會是什麼。他提到雖然現在每週都有新的帶有工具的聊天機器人介面出現，但整合這些工具並不容易。他認為，一旦 MCP 的標準確定下來，並且服務提供商開始建構他們的 mCP 或類似的東西，非技術人員就能夠更無縫、更輕鬆地進行整合. 然而，他也指出，目前來看，無論是對於非技術人員還是技術人員，現在就採取重大的商業決策可能還為時過早，因為 MCP 仍處於非常早期的階段。他提到，如果像 OpenAI 這樣的公司明天提出一個新的標準，那麼現在的一切都可能會改變。因此，他建議大家現在要做的就是觀察、學習，等待時機成熟再採取行動。他認為，理解 MCP 的運作方式將有助於理解未來可能出現的新事物，並在最終標準確定時能夠迅速行動。
+
+# MCP vs Function Call 的區別
+
+## MCP (Model Context Protocol)
+
+* Anthropic 開發的標準化協議，用於 AI 模型與外部系統之間的通信
+* 提供了一個統一的接口，讓 LLM 能夠安全地訪問各種外部資源（文件系統、數據庫、API 等）
+* 主要解決的是連接性問題 - 如何讓 AI 模型與外界系統溝通
+* 包含了身份驗證、權限管理、資源發現等完整的協議棧
+
+## Function Call
+* **是 LLM 的一個核心能力**，指模型能夠識別何時需要調用外部函數並正確格式化調用
+* 專注於函數調用的邏輯 - 理解何時調用、如何構造參數、如何處理返回值
+* 是實現工具使用的基礎技術
+
+## Function Call = Tool Call 嗎？
+
+基本上是的，這兩個術語在實際使用中幾乎可以互換：
+* Function Call 更技術性，強調調用函數的機制
+* Tool Call 更概念性，強調使用工具來完成任務
+* 在 OpenAI 的 API 中稱為 "function calling"
+* 在 Anthropic 的 Claude 中稱為 "tool use"
+* 本質上都是讓 LLM 調用預定義的外部功能
+
+## 請用 "路徑" 來解釋一下
+
+### 傳統 LLM 路徑
+
+* **用戶問題 → LLM → 文字回答**
+
+### 有 Function Call 的路徑
+
+* **用戶問題 → LLM → 識別需要工具 → 調用函數 → 獲得結果 → LLM → 整合回答**
+
+### MCP 框架下的完整路徑
+
+用戶問題 
+    ↓
+   LLM (判斷需要外部資源)
+    ↓
+MCP 協議層 (身份驗證、權限檢查)
+    ↓
+外部系統連接 (數據庫/API/文件系統)
+    ↓
+Function Call 執行
+    ↓
+結果返回 → MCP 協議層
+    ↓
+   LLM (整合結果)
+    ↓
+  最終回答
+
+## 核心差異
+
+### Function Call：
+
+* 直接的函數調用機制
+* LLM 直接知道有哪些函數可用
+* 簡單直接的執行路徑
+
+### MCP：
+
+* 有完整的連接、驗證、權限管理流程
+* 支援多個伺服器和資源的統一管理
+* 更安全、更標準化的架構
+
+
+```python
+# ============================================
+# 1. 純 Function Call 示範 (OpenAI 風格)
+# ============================================
+
+import json
+from openai import OpenAI
+
+# 定義可用的函數
+def get_weather(location: str) -> dict:
+    """獲取天氣資訊"""
+    # 模擬天氣 API 調用
+    return {"location": location, "temperature": "25°C", "condition": "晴天"}
+
+def calculate_math(expression: str) -> float:
+    """計算數學表達式"""
+    return eval(expression)  # 生產環境請勿使用 eval
+
+# Function Call 的函數定義（給 LLM 看的）
+available_functions = {
+    "get_weather": {
+        "name": "get_weather",
+        "description": "獲取指定地點的天氣資訊",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {"type": "string", "description": "城市名稱"}
+            },
+            "required": ["location"]
+        }
+    },
+    "calculate_math": {
+        "name": "calculate_math", 
+        "description": "計算數學表達式",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "expression": {"type": "string", "description": "數學表達式"}
+            },
+            "required": ["expression"]
+        }
+    }
+}
+
+# 實際的函數映射
+function_map = {
+    "get_weather": get_weather,
+    "calculate_math": calculate_math
+}
+
+def handle_function_call(function_name: str, arguments: dict):
+    """處理 LLM 的函數調用請求"""
+    if function_name in function_map:
+        return function_map[function_name](**arguments)
+    else:
+        raise ValueError(f"未知函數: {function_name}")
+
+# 模擬 LLM 的 Function Call 流程
+def simulate_llm_with_function_call(user_message: str):
+    """模擬帶有 Function Call 的 LLM 對話"""
+    
+    # 第一步：LLM 判斷是否需要調用函數
+    if "天氣" in user_message:
+        # LLM 決定調用天氣函數
+        function_call = {
+            "name": "get_weather",
+            "arguments": {"location": "台北"}
+        }
+        
+        # 執行函數調用
+        result = handle_function_call(function_call["name"], function_call["arguments"])
+        
+        # LLM 整合結果回答
+        return f"根據查詢結果，{result['location']}現在是{result['condition']}，溫度{result['temperature']}"
+    
+    return "我可以幫你查天氣或計算數學問題！"
+```
+
+```python
+# ============================================
+# 2. MCP 框架示範
+# ============================================
+
+class MCPServer:
+    """MCP 伺服器 - 提供資源和工具"""
+    
+    def __init__(self, server_name: str):
+        self.server_name = server_name
+        self.resources = {}
+        self.tools = {}
+        self.permissions = {}
+    
+    def register_resource(self, resource_id: str, resource_data):
+        """註冊資源"""
+        self.resources[resource_id] = resource_data
+    
+    def register_tool(self, tool_name: str, tool_function, description: str):
+        """註冊工具"""
+        self.tools[tool_name] = {
+            "function": tool_function,
+            "description": description
+        }
+    
+    def authenticate(self, client_id: str) -> bool:
+        """身份驗證"""
+        # 簡化的驗證邏輯
+        return client_id in ["trusted_llm", "claude", "gpt"]
+    
+    def check_permission(self, client_id: str, resource: str) -> bool:
+        """權限檢查"""
+        return self.authenticate(client_id)
+
+class MCPClient:
+    """MCP 客戶端 - LLM 端"""
+    
+    def __init__(self, client_id: str):
+        self.client_id = client_id
+        self.connected_servers = {}
+    
+    def connect_to_server(self, server: MCPServer):
+        """連接到 MCP 伺服器"""
+        if server.authenticate(self.client_id):
+            self.connected_servers[server.server_name] = server
+            return f"成功連接到 {server.server_name}"
+        else:
+            raise PermissionError("身份驗證失敗")
+    
+    def discover_resources(self, server_name: str):
+        """發現可用資源"""
+        if server_name in self.connected_servers:
+            server = self.connected_servers[server_name]
+            return list(server.resources.keys())
+        return []
+    
+    def call_tool(self, server_name: str, tool_name: str, **kwargs):
+        """通過 MCP 調用工具"""
+        server = self.connected_servers[server_name]
+        
+        # MCP 協議處理
+        if not server.check_permission(self.client_id, tool_name):
+            raise PermissionError("無權限訪問此工具")
+        
+        if tool_name not in server.tools:
+            raise ValueError(f"工具 {tool_name} 不存在")
+        
+        # 執行實際的函數調用
+        tool_function = server.tools[tool_name]["function"]
+        return tool_function(**kwargs)
+
+# ============================================
+# 3. 實際使用示範
+# ============================================
+
+def demo_function_call_only():
+    """示範純 Function Call"""
+    print("=== 純 Function Call 示範 ===")
+    
+    user_input = "台北天氣如何？"
+    response = simulate_llm_with_function_call(user_input)
+    print(f"用戶: {user_input}")
+    print(f"回答: {response}")
+    print()
+
+def demo_mcp_framework():
+    """示範 MCP 框架"""
+    print("=== MCP 框架示範 ===")
+    
+    # 建立 MCP 伺服器
+    weather_server = MCPServer("weather_service")
+    weather_server.register_tool("get_weather", get_weather, "獲取天氣資訊")
+    weather_server.register_resource("weather_data", {"台北": "晴天", "高雄": "多雲"})
+    
+    # 建立 MCP 客戶端 (模擬 LLM)
+    llm_client = MCPClient("claude")
+    
+    # 連接流程
+    connection_result = llm_client.connect_to_server(weather_server)
+    print(f"連接結果: {connection_result}")
+    
+    # 發現資源
+    available_resources = llm_client.discover_resources("weather_service")
+    print(f"可用資源: {available_resources}")
+    
+    # 通過 MCP 調用工具
+    weather_result = llm_client.call_tool("weather_service", "get_weather", location="台北")
+    print(f"天氣查詢結果: {weather_result}")
+    print()
+
+def demo_comparison():
+    """對比示範"""
+    print("=== 路徑對比 ===")
+    
+    print("Function Call 路徑:")
+    print("用戶問題 → LLM 判斷 → 直接調用函數 → 返回結果")
+    
+    print("\nMCP 路徑:")
+    print("用戶問題 → LLM 判斷 → MCP 協議 → 身份驗證 → 權限檢查 → 調用工具 → 結果返回")
+    print()
+
+# ============================================
+# 4. 運行示範
+# ============================================
+
+if __name__ == "__main__":
+    demo_function_call_only()
+    demo_mcp_framework() 
+    demo_comparison()
+    
+    print("=== 總結 ===")
+    print("Function Call ≈ Tool Call: 都是調用外部功能的能力")
+    print("MCP: 是管理這些調用的標準化協議框架")
+    print("關係: MCP 可以包含並管理多個 Function/Tool Calls")
+```
