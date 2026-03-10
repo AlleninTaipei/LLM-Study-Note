@@ -12,11 +12,11 @@ Download the [w64devkit](https://github.com/skeeto/w64devkit/releases/download/v
 git clone https://github.com/ggerganov/llama.cpp
 ```
 
-### Run w64devkit to compiler
+### Run w64devkit to compile
 
 Change directory to `llama.cpp`
 
-Compiler `llama.cpp` with `make`
+Compile `llama.cpp` with `make`
 
 ![image](assets/cdllamacpp.png)
 
@@ -47,7 +47,7 @@ Use -h, --help, --usage to print usage.
 
 ## Local Server
 
-`llama.cpp` also provides the function of setting up a server. You can access the model through the HTTP API. You ./llama-server can quickly set it up by using it. By default http://127.0.0.1:8080/, an LLM Service will be opened. 
+`llama.cpp` also provides the function of setting up a server. You can access the model through the HTTP API. You can quickly set it up by running `./llama-server`. By default http://127.0.0.1:8080/, an LLM Service will be opened. 
 
 ```bash
 ./llama-server -m modelsdownload/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf
@@ -84,8 +84,8 @@ Use -h, --help, --usage to print usage.
 ||Q8_0: 8-bit quantization|
 |Measures|Perplexity: A measure of how well the model predicts text. Lower is better.|
 ||File size: The size of the model on disk in gigabytes (G).|
-||ms/tok @ 4th: Milliseconds per token on 4th generation hardware.|
-||ms/tok @ 8th: Milliseconds per token on 8th generation hardware.|
+||ms/tok @ 4th: Milliseconds per token using 4 threads.|
+||ms/tok @ 8th: Milliseconds per token using 8 threads.|
 ||Bits/weight: The number of bits used to represent each weight in the model.|
 
 |Key observations|Description|
