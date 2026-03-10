@@ -30,7 +30,7 @@
 |Apple M1|While not exclusively an edge AI chip, Apple's market share is substantial due to its integration in all new Macs and some iPads, giving it a large presence in consumer devices.|
 |Intel|Intel's various AI offerings, including Movidius, have a significant market share across different edge AI applications.|
 |Google Edge TPU|Has a niche but growing market share, particularly in IoT and small-scale edge deployments.|
-|Qualcomm Snapdragon|Dominates the mobile device market, with a very large share in smartphones and tablets.
+|Qualcomm Snapdragon|Dominates the mobile device market, with a very large share in smartphones and tablets.|
 |Xilinx (AMD) Versal AI Edge|Has a strong presence in the FPGA market, particularly in industrial and automotive applications.|
 |NXP iMX 8M Plus|Well-established in industrial IoT and automotive sectors, with a solid market share in these areas.|
 |Hailo-8|A newer entrant gaining traction, especially in smart city and surveillance applications.|
