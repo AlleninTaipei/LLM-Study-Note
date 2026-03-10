@@ -19,7 +19,7 @@
 |**Deployment**|After the model has been trained and converted (if necessary), it's deployed into production where it can be used to make real-world predictions or decisions. Deployment involves integrating the model into the target environment, whether that's a web application, a mobile app, an IoT device, or some other system.|
 
 ## Let's check a NPU solution example: [Kneron](https://www.kneron.com/en/)
-* Does it meet the above definition of NPUs and the relevant discussion on the application of artificial notification?
+* Does it meet the above definition of NPUs and the relevant discussion on the application of artificial intelligence?
 
 |Solution|Description|
 |-|-|
@@ -33,5 +33,5 @@
 ## Conclusion
 
 * **NPUs are highly specialized for specific AI tasks, especially inference, making them very efficient for such applications.**
-* **GPUs are more versatile and widely used across all stages of AI development,  particularly excelling in the training of large-scale neural networks due to their flexibility and powerful parallel processing capabilities.**
+* **GPUs are more versatile and widely used across all stages of AI development, particularly excelling in the training of large-scale neural networks due to their flexibility and powerful parallel processing capabilities.**
 
