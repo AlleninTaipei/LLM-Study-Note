@@ -72,13 +72,13 @@ Americans report feeling more concerned than excited about AI, rising from 37% i
 
 ## Chapter 1: Research and Development
 
-> This chapter studies trends in AI research and development. It begins by examining trends in AI publications and patents, and then examines trends in notable AI systems and foundation models. It concludes by analyzing AI conference attendance and open-sourceAI software projects.
+> This chapter studies trends in AI research and development. It begins by examining trends in AI publications and patents, and then examines trends in notable AI systems and foundation models. It concludes by analyzing AI conference attendance and open-source AI software projects.
 
 ||Chapter Highlights|
 |-|-|
 |1.|Industry continues to dominate frontier AI research. In 2023, industry produced 51 notable machine learning models, while academia contributed only 15. There were also 21 notable models resulting from industry-academia collaborations in 2023, a new high.|
 |2.|More foundation models and more open foundation models. In 2023, a total of 149 foundation models were released, more than double the amount released in 2022. Of these newly released models, 65.7% were open-source, compared to only 44.4% in 2022 and 33.3% in 2021.|
-|3.|Frontier models get way more expensive. According to AI Index estimates, the training costs of state-of-the-art AI models have reached unprecedented levels. For example, OpenAI’s GPT-4 used an estimated \$78 million worth of compute to train, while Google’s Gemini Ultra cost \$191 million for compute.
+|3.|Frontier models get way more expensive. According to AI Index estimates, the training costs of state-of-the-art AI models have reached unprecedented levels. For example, OpenAI’s GPT-4 used an estimated \$78 million worth of compute to train, while Google’s Gemini Ultra cost \$191 million for compute.|
 |4.|The United States leads China, the EU, and the U.K. as the leading source of top AI models. In 2023, 61 notable AI models originated from U.S.-based institutions, far outpacing the European Union’s 21 and China’s 15.|
 |5.|The number of AI patents skyrockets. From 2021 to 2022, AI patent grants worldwide increased sharply by 62.7%. Since 2010, the number of granted AI patents has increased more than 31 times.|
 |6.|China dominates AI patents. In 2022, China led global AI patent origins with 61.1%, significantly outpacing the United States, which accounted for 20.9% of AI patent origins. Since 2010, the U.S. share of AI patents has decreased from 54.1%.|
@@ -126,7 +126,7 @@ Americans report feeling more concerned than excited about AI, rising from 37% i
 
 |Trends|Details|
 |-|-|
-|Sector|Creating cutting-edge AI models now demands a substantial amount of data, computing power, and financial resources that are not available in academia. Since 2014, the industry has adopted take the lead.|
+|Sector|Creating cutting-edge AI models now demands a substantial amount of data, computing power, and financial resources that are not available in academia. Since 2014, the industry has taken the lead.|
 ||In 2023, 51 notable models were produced by industry, 15 notable models emerged from academia and 21 notable models resulted from industry/academic partnerships, marking a new high.|
 |National Affiliation|In 2023, the United States led with 61 notable machine learning models, followed by China with 15, and France with 8.|
 ||For the first time since 2019, the European Union and the United Kingdom together have surpassed China in the number of notable AI models produced.|
@@ -140,7 +140,7 @@ Americans report feeling more concerned than excited about AI, rising from 37% i
 ||Original Transformer (2017): Required around 7,400 petaFLOPs.|
 ||Google’s Gemini Ultra: One of the current state-of-the-art models, requiring 50 billion petaFLOPs.|
 |Domain||
-|Language Model|GPt-3 175B, Llama 2-70B|
+|Language Model|GPT-3 175B, Llama 2-70B|
 |Vision Model|AlexNet|
 |Multimodal|GPT-4|
 
@@ -157,7 +157,7 @@ the Ecosystem Graphs to study trends in foundation models over time.
 ||98 were open (65.8%)|
 ||23 were limited access (15.4%)|
 ||28 had no access (18.8%)|
-|Organizational|Foundation models predominantly originate from industry sectors:
+|Organizational|Foundation models predominantly originate from industry sectors:|
 ||In 2023, 72.5% of the models came from industry. Only 18.8% were from academia.|
 ||Google: 18 models|
 ||Meta: 11 models|
@@ -260,7 +260,7 @@ reasoning, and agentic behavior—areas that were underrepresented in previous v
 ||Gemini Ultra’s score was the first to surpass MMLU’s (Massive Multitask Language Understanding) human baseline of 89.8%.|
 |Generation|Launched in 2023, the Chatbot Arena Leaderboard is one of the first comprehensive evaluations of public Large Language Model preference. The leaderboard allows users to query two anonymous models and vote for the preferred generations. As of early 2024, the platform has garnered over 200,000 votes, and users ranked OpenAI’s GPT-4 Turbo as the most preferred model.|
 |Factuality and Truthfulness|Introduced at ACL 2022, TruthfulQA is a benchmark designed to evaluate the truthfulness of Large Language Models in generating answers to questions. This benchmark comprises approximately 800 questions across 38 categories, including health, politics, and finance. GPT-4 (RLHF) released in early 2024, has achieved the highest performance thus far on the TruthfulQA benchmark, with a score of 0.6. This score is nearly three times higher than that of a GPT-2-based model tested in 2021, indicating that Large Language Models are becoming progressively better at providing truthful answers|
-||HaluEval, introduced in 2023, is a new benchmark designed to assess hallucinations in Large Language Models. It includes over 35,000 samples, both hallucinated and normal, for analysis and evaluation by Large Language Models. The findings reveal that many Large Language Models struggle with these tasks, highlig that hallucination is a significant ongoing issue.|
+||HaluEval, introduced in 2023, is a new benchmark designed to assess hallucinations in Large Language Models. It includes over 35,000 samples, both hallucinated and normal, for analysis and evaluation by Large Language Models. The findings reveal that many Large Language Models struggle with these tasks, highlighting that hallucination is a significant ongoing issue.|
 
 ### 2.3 Coding
 
@@ -312,14 +312,14 @@ reasoning, and agentic behavior—areas that were underrepresented in previous v
 |PlanBench|A planning system receives a specified goal, an initial state, and a collection of actions. Each action is defined by preconditions, which must be met for the action to be executed, and the effects that result from the action’s execution. The system constructs a plan, comprising a series of actions, to achieve the goal from the initial state. A group from Arizona State University has proposed PlanBench, a benchmarksuite containing problems used in the automated planning community, especially those used in the International Planning Competition.|They tested I-GPT-3 and GPT-4 on 600 problems in the Blocksworld domain (where a hand tries to construct stacks of blocks when it is only allowed to move one block at a time to the table or to the top of a clear block) using one-shot learning and showed that GPT-4 could generate correct plans and cost-optimal plans about 34% of the time, and I-GPT-3 about 6%.|
 |Visual Reasoning|Visual Commonsense Reasoning (VCR) Introduced in 2019, the Visual Commonsense Reasoning (VCR) challenge tests the commonsense visual reasoning abilities of AI systems. In this challenge, AI systems not only answer questions based on images but also reason about the logic behind their answers.|While AI  systems have yet to outperform humans on this task, their capabilities are steadily improving. Between 2022 and 2023, there was a 7.93% increase in AI performance on the VCR challenge.|
 |Moral Reasoning|A team of Stanford researchers created a new dataset (MoCa) of human stories with moral elements.|No model perfectly matches human moral systems, but newer, larger models like GPT-4 and Claude show greater alignment with human moral sentiments than smaller models like GPT-3, suggesting that as AI models scale, they are gradually becoming more morally aligned with humans.|
-|Causal Reasoning|Assessing whether Large Language Models have theory-of-mind (ToM) capabilities—understanding and attributing mental states such as beliefs, intentions, and emotions—has traditionally challenged AI researchers. BigToM, comprising 25 controls and 5,000 model-generated evaluations, has been rated by human evaluators as superior to existing ToM benchmarks.|BigToM tests Large Language Models on forward belief (predicting future events), forward action (acting based on future event predictions), and backward belief (retroactively inferring causes of actions). GPT-4 was the top performer, with ToM capabilities nearing but not surpassing human levels. More pecifically, as measured by accuracy in correctly inferring beliefs, GPT-4 closely matched human performance in forward belief and backward belief tasks and slightly surpassed humans in forward action tasks.|
+|Causal Reasoning|Assessing whether Large Language Models have theory-of-mind (ToM) capabilities—understanding and attributing mental states such as beliefs, intentions, and emotions—has traditionally challenged AI researchers. BigToM, comprising 25 controls and 5,000 model-generated evaluations, has been rated by human evaluators as superior to existing ToM benchmarks.|BigToM tests Large Language Models on forward belief (predicting future events), forward action (acting based on future event predictions), and backward belief (retroactively inferring causes of actions). GPT-4 was the top performer, with ToM capabilities nearing but not surpassing human levels. More specifically, as measured by accuracy in correctly inferring beliefs, GPT-4 closely matched human performance in forward belief and backward belief tasks and slightly surpassed humans in forward action tasks.|
 ||Tübingen Cause-Effect Pairs, researchers from Microsoft and the University of Chicago have demonstrated that Large Language Models are effective causal reasoners.|Notably, GPT-4 outperformed prior covariance-based AI models, which were explicitly trained for causal reasoning tasks.|
 
 ### 2.7 Audio
 
 > AI systems are adept at processing human speech, with audio capabilities that include transcribing spoken words to text and recognizing individual speakers. More recently, AI has advanced in generating synthetic audio content.
 
-|Models|Details|Performanc|
+|Models|Details|Performance|
 |-|-|-|
 |UniAudio|UniAudio uniformly tokenizes all audio types and, like modern Large Language Models, employs next-token prediction for highquality audio generation. UniAudio is capable of generating high-quality speech, sound, and music.|UniAudio surpasses leading methods in tasks, including text-to-speech, speech enhancement, and voice conversion. With 1 billion parameters and trained on 165,000 hours of audio, UniAudio exemplifies the efficacy of big data and self-supervision for music generation.|
 |MusicGEN and MusicLM|Meta’s MusicGen is a novel audio generation model that also leverages the transformerarchitecture common in language models to generate audio. MusicGen enables users to specify text for a desired audio outcome and then fine-tune it using specific melodies.|In comparative studies, MusicGen outshines other popular text-to-music models like Riffusion, Moûsai, and MusicLM across various generative music metrics. Although MusicGen outperforms certain textto-music models released earlier in the year, MusicLM is worth highlighting because its release was accompanied by the launch of MusicCaps, a state-of-the-art dataset of 5.5K music-text pairs. MusicCaps was used by MusicGen researchers to benchmark the performance of their family of models.|
@@ -372,7 +372,7 @@ of this kind of self-correction.
 |Performance|Often demonstrate superior performance|Performance can vary, sometimes lagging behind closed models|
 |Innovation|Control may inhibit external innovation|Potential for broader collaboration and innovation|
 |Security|Lower perceived security risks due to limited access|Potential for misuse, raising security concerns|
-|Example Large Language Models|Google's Gemini, Microsoft's Turing|OpenAI's GPT-4, Anthropic's Claude 2, Meta's Llama 2,Stability AI's Stable Diffusion|
+|Example Large Language Models|Google's Gemini, Microsoft's Turing, OpenAI's GPT-4, Anthropic's Claude 2|Meta's Llama 2, Stability AI's Stable Diffusion|
 
 ### 2.12 Techniques for Large Language Model Improvement
 
@@ -382,7 +382,7 @@ of this kind of self-correction.
 
 * Mastering the art of crafting effective prompts significantly enhances the performance of Large Language Models without requiring that models undergo underlying improvements.
 * Chain of thought (CoT) and Tree of Thoughts (ToT) are prompting methods that can improve the performance of Large Language Models on reasoning tasks.
-* A paper from DeepMind has introduced Optimization by PROmpting (OPRO), a method that uses Large Language Models to iteratively generate prompts to improve algorithmic performance. OPRO uses natural language to guide Large Language Models in creating new prompts based on problem descriptions and previous solutions. Compared to other prompting approaches like “let’s think step by step” or an empty starting point, ORPO leads to significantly greater accuracy on virtually all 23 BIG-bench Hard tasks.
+* A paper from DeepMind has introduced Optimization by PROmpting (OPRO), a method that uses Large Language Models to iteratively generate prompts to improve algorithmic performance. OPRO uses natural language to guide Large Language Models in creating new prompts based on problem descriptions and previous solutions. Compared to other prompting approaches like “let’s think step by step” or an empty starting point, OPRO leads to significantly greater accuracy on virtually all 23 BIG-bench Hard tasks.
 
 #### Fine-Tuning
 
@@ -404,7 +404,7 @@ of this kind of self-correction.
 |-|-|
 |Management of thermal energy storage systems|Anticipating thermal energy needs and managing thermal energy storage systems.|
 |Improving waste management|Saving time and costs in waste-to-energy conversion, waste sorting, and waste monitoring.|
-|More eǅciently cooling buildings|Optimizing the energy usage associated with air-conditioning.|
+|More efficiently cooling buildings|Optimizing the energy usage associated with air-conditioning.|
 |Improving pest management|Identifying and eliminating pests in commercial tomato harvests.|
 |Enhancing urban air quality|Forecasting and predicting air quality in urban cities.|
 
@@ -527,7 +527,7 @@ Data governance, on the other hand, encompasses policies, procedures, and standa
 |Dissemination of Fake Content|A developer called Nea Paw set up Countercloud as an experiment in creating a fully automated disinformation pipeline. An AI model is used to continuously scrape the internet for articlesand automatically decide which content it should target with counter-articles. Next, another AI model is tasked with writing a convincing counter-article that can include images and audio summaries. This counter-article is subsequently attributed to a fake journalist and posted on the CounterCloud website.Subsequently, another AI system generates comments on the counter-article, creating the appearance of organic engagement. Finally, an AI searches X for relevant tweets, posts the counter-article as a reply, and comments as a user on these tweets. The entire setup for this authentic-appearing misinformation system only costs around $400.|
 |Detecting Deepfakes|A team of Singaporean researchers studied how well deepfake detectors generalize to datasets they have not been trained on. The researchers compared five deepfake detection approaches and found that even more recently introduced deepfake detection methods suffer significant performance declines on never-before-seen datasets. However, the study does note that there are underlying similarities between seen and unseen datasets, meaning that in the future, robust and broadly generalizable deepfake detectors could becreated.|
 |Large Language Models and Political Bias|New research published in 2023 suggests that many major Large Language Models like ChatGPT are not necessarily free of bias. The study revealed that ChatGPT exhibits a notable and systematic bias favoring Democrats in the United States and the Labour Party in the U.K. The identification of bias in these Large Language Models raises concerns about their potential to influence the political views and stances of users who engage with these tools.|
-|Impact of AI useage on Political Processes|Heuristic-driven approximations Record linkage Outlier detection Drop box location determination Facility location Clustering Predictive policing Time series motifs Face recognition Biometrics Video-based vote counting Event detection Person re-identification|
+|Impact of AI Usage on Political Processes|Heuristic-driven approximations Record linkage Outlier detection Drop box location determination Facility location Clustering Predictive policing Time series motifs Face recognition Biometrics Video-based vote counting Event detection Person re-identification|
 
 ## Chapter 4: Economy
 
@@ -559,7 +559,7 @@ This chapter examines AI-related economic trends using data from Lightcast, Link
 ||Copilot for Business leverages an OpenAI Codex model to enhance code suggestion quality. At launch, GitHub Copilot contributed to an average of 46% of developers’ code across various programming languages, with this figure rising to 61% for Java.|
 |3/7|Salesforce introduces Einstein GPT|
 ||Einstein GPT, the first comprehensive AI for CRM, utilizes OpenAI’s models. Einstein GPT aids Salesforce customers insales, marketing, and customer management.|
-|3.16|Microsoft announces integration of GPT-4 into Office 365|
+|3/16|Microsoft announces integration of GPT-4 into Office 365|
 ||Microsoft rolls out Copilot across Office 365, offering AI assistance in Word, PowerPoint, and Excel.|
 |3/30|Bloomberg announces Large Language Model for finance|
 ||Bloomberg’s 50-billion parameter Large Language Model is custom-built for analyzing financial data and tailored to finance professionals. This model is capable of performing financial analyses on Bloomberg’s extensive datasets.|
@@ -724,7 +724,7 @@ their platform.
 ||Notable Scientific Milestones|
 |-|-|
 |AlphaDev discovers faster sorting algorithms|AlphaDev developed algorithms with fewer instructions than existing human benchmarks for fundamental sorting algorithms on short sequences such as Sort 3, Sort 4, and Sort 5. Some of the new algorithms discovered by AlphaDev have been incorporated into the LLVM standard C++ sort library. This marks the first update to this part of the library in over 10 years and is the first addition designed using reinforcement learning.|
-|F3D mesh optimization with FlexiCubes|3D mesh optimization with FlexiCubes 3D mesh generation, crucial in computer graphics, involves creating a mesh of vertices, edges, and faces to define 3D objects. It is key to video games, animation, medical imaging, and scientific visualization. FlexiCubes employs AI for gradient-based optimization and adaptable parameters. This method allows for precise, localized mesh adjustments. FlexiCubes achieves mesh extractions that align much more closely with the underlying ground truth.|
+|3D mesh optimization with FlexiCubes|3D mesh optimization with FlexiCubes 3D mesh generation, crucial in computer graphics, involves creating a mesh of vertices, edges, and faces to define 3D objects. It is key to video games, animation, medical imaging, and scientific visualization. FlexiCubes employs AI for gradient-based optimization and adaptable parameters. This method allows for precise, localized mesh adjustments. FlexiCubes achieves mesh extractions that align much more closely with the underlying ground truth.|
 |Synbot, AI-driven robotic chemist for synthesizing organic molecules|AI-driven robotic chemist for synthesizing organic molecules Synbot employs a multilayered system,comprising an AI software layer for chemical synthesis planning, a robot software layer for translating commands, and a physical robot layer for conducting experiments. The closed-loop feedback mechanism between the AI and the robotic system enables Synbot to develop synthetic recipes with yields equal to or exceeding established references. Synbot’s automation of organic synthesis highlights AI’s potential in fields such as pharmaceuticals and materials science.|
 |More accurate global weather forecasting with GraphCast|GraphCast is a new weather forecasting system that delivers highly accurate 10-day weather predictions in under a minute. Utilizing graph neural networks and machine learning, GraphCast processes vast datasets to forecast temperature, wind speed, atmospheric conditions, and more. Compares the performance of GraphCast with the current industry state-of-theart weather simulation system: the High Resolution Forecast (HRES). GraphCast posts a lower root mean squared error, meaning its forecasts more closely correspond to observed weather patterns. GraphCast can be a valuable tool in deciphering weather patterns, enhancing preparedness for extreme weather events, and contributing to global climate research.|
 |Discovering new materials with GNoME|Google researchers have demonstrated that graph networks, a type of AI model, can expedite this process when trained on large datasets. GNoME, outperformed the Materials Project, a leading method in materials discovery, by identifying a significantly larger number of stable. The success of AI-driven projects like GNoME highlights the power of data and scaling in speeding up scientific breakthroughs.|
@@ -745,7 +745,7 @@ their platform.
 ||Clinical Knowledge|
 |-|-|
 |MedQA|Introduced in 2020, MedQA is a comprehensive dataset derived from professional medical board exams, featuring over 60,000 clinical questions designed to challenge doctors. AI performance on the MedQA benchmark has seen remarkable improvement, with the leading system, GPT-4 Medprompt, achieving an accuracy rate of 90.2%—an increase of 22.6 percentage points from the top score in 2022.|
-|GPT-4 Medprompt|Fine-tuning entails training a Large Language Model on domain-specific data. Research from Microsoft in late 2023 has overturned this assumption. This study employed prompt engineering to direct GPT-4 toward achieving remarkable performance on the MultiMedQA benchmark suite, a group of four challenging medical benchmarks. PT-4 Medprompt exceeded the performance of the top 2022 model, Flan-PaLM 540B, in the multiplechoice sections of several renowned medical benchmarks, including PubMedQA, MedMCQA, and MMLU, by 3.0, 21.5, and 16.2 percentage points, respectively. It also exceeded the performance of the then state-of-the-art Med-PaLM 2.Moreover, as noted earlier, GPT-4 Medprompt was the first to surpass the 90% accuracy mark on the MedQA benchmark. This breakthrough not only underscores GPT-4 Medprompt’s exceptional and potentially clinically useful medical capabilities but also demonstrates that fine-tuning may not always be necessary for adapting models to specialized domains. Prompt engineering has shown to be a promising alternative strategy,|
+|GPT-4 Medprompt|Fine-tuning entails training a Large Language Model on domain-specific data. Research from Microsoft in late 2023 has overturned this assumption. This study employed prompt engineering to direct GPT-4 toward achieving remarkable performance on the MultiMedQA benchmark suite, a group of four challenging medical benchmarks. GPT-4 Medprompt exceeded the performance of the top 2022 model, Flan-PaLM 540B, in the multiplechoice sections of several renowned medical benchmarks, including PubMedQA, MedMCQA, and MMLU, by 3.0, 21.5, and 16.2 percentage points, respectively. It also exceeded the performance of the then state-of-the-art Med-PaLM 2.Moreover, as noted earlier, GPT-4 Medprompt was the first to surpass the 90% accuracy mark on the MedQA benchmark. This breakthrough not only underscores GPT-4 Medprompt’s exceptional and potentially clinically useful medical capabilities but also demonstrates that fine-tuning may not always be necessary for adapting models to specialized domains. Prompt engineering has shown to be a promising alternative strategy,|
 |MediTron-70B|GPT-4 Medprompt is an impressive system; however, it is closed-source, meaning its weights are not freely available to the broader public for use. New research in 2023 has also sought to advance the capabilities of open-source medical Large Language Models. Among this new research, MediTron-70B stands out as particularly promising. This model achieves a respectable 70.2% accuracy on the MedQA benchmark. Although this is below the performance of GPT-4 Medprompt and MedPaLM 2 (both closed models), it represents a significant improvement over the state-ofthe-art results from 2023 and surpasses other open-source models like Llama 2.MediTron-70B’s score on MedQA is the highest yet achieved by an open-source model. If medical AI is to reach its fullest potential, it is important that its capabilities are widely accessible. In this context, MediTron represents an encouraging step forward.|
 
 ||Diagnosis|
@@ -785,7 +785,7 @@ The chapter wraps up with insights into K–12 CS education in the United States
 |CS Master's Graduates|While the total number of new CS master's graduates doubled over the past decade, it seems to have leveled out since 2018 and slightly decreased in 2022.There was a notable decrease in international CS master's students in 2022, with the trend starting around 2017.|
 |CS PhD Graduates|There was a significant increase in the number of new CS PhD graduates in 2022, reaching the highest level since 2010.Although the proportion of international students among CS PhD graduates has risen over the past decade, there was a slight decrease in 2022.|
 |Career Paths of AI PhD Graduates|A growing proportion of AI doctoral recipients are choosing careers in industry over academia, with the majority entering industry roles after graduation.|
-CS, CE, and Information Faculty|The total number of CS, CE, and information faculty in American and Canadian universities has been steadily increasing.There has been a notable increase in new faculty appointments, with a significant proportion coming from other academic positions.The competition for new CS faculty positions appears to be increasing, as indicated by a higher rate of declined job offers. International hires among new tenure-track faculty in CS, CE, and information disciplines increased significantly in 2022.|
+|CS, CE, and Information Faculty|The total number of CS, CE, and information faculty in American and Canadian universities has been steadily increasing.There has been a notable increase in new faculty appointments, with a significant proportion coming from other academic positions.The competition for new CS faculty positions appears to be increasing, as indicated by a higher rate of declined job offers. International hires among new tenure-track faculty in CS, CE, and information disciplines increased significantly in 2022.|
 |Salaries and Departures|Salaries for full professors have not kept pace with inflation rates, while those for assistant and associate professors have seen slight increases.There has been a significant increase in faculty departures, with a notable proportion transitioning to other academic positions.|
 
 |Europe|Postsecondary CS and AI Education|
