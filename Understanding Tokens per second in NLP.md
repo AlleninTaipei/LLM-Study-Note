@@ -85,7 +85,7 @@ tokenizer = AutoTokenizer.from_pretrained("gpt2")
 input_text = "Your input text here"
 inputs = tokenizer(input_text, return_tensors="pt")
 
-# This will print performance metrics, including tokens per second
+# Time this call externally to compute tokens per second
 output = model.generate(**inputs, max_new_tokens=50)
 ```
 
@@ -100,7 +100,7 @@ with profiler.trace("generate"):
     # Your model code here
     pass
 
-# View the trace in TensorBoard
+# View the trace in Perfetto (https://ui.perfetto.dev)
 ```
 
 ## The most important concepts

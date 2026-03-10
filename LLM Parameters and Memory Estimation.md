@@ -7,7 +7,7 @@
 |7B|28 GB|14 GB|7 GB|3.5 GB|
 |13B|52 GB|26 GB|13 GB|6.5 GB|
 |34B|136 GB|68 GB|34 GB|17 GB|
-|70B|280 GB|150 GB|70 GB|35 GB|
+|70B|280 GB|140 GB|70 GB|35 GB|
 
 |Estimate Memory Usage for Training and Fine-Tuning|VRAM for Model Parameters|VRAM for Gradients and Optimizer States|Total VRAM Requirement|
 |-|-|-|-|
@@ -16,7 +16,7 @@
 |34B|136 GB|408 GB|544 GB|
 |70B|280 GB|840 GB|1120 GB|
   
-|Find practical memory pptimizatio solutions on the Internet|Model Size|Total VRAM Size|
+|Find practical memory optimization solutions on the Internet|Model Size|Total VRAM Size|
 |-|-|-|
 |[Mentor-100](https://drive.google.com/file/d/1-umJYfhbdZ3Iaka3V4bP_MFiyLEvXuG3/view)|33B+|40 GB|
 |[Mentor-200](https://drive.google.com/file/d/1-umJYfhbdZ3Iaka3V4bP_MFiyLEvXuG3/view)|70B+|80 GB|
@@ -104,7 +104,7 @@
 |**Tensor Parallelism**|Splitting tensors across GPUs|Efficient use of GPU resources|Complexity in implementation|
 |**Model Parallelism**|Handling large models|Enables training of very large models|Increases inter-GPU communication overhead|
 |**ZeRO (Zero Redundancy Optimizer)**|Memory-efficient optimization|Drastically reduces memory footprint|Requires advanced implementation|
-|**FSDP (Fully Sharded Data Parallel)**|Efficient distributed training|Combines benefits of data and model parallelismImplementation complexity and potential communication overhead|
+|**FSDP (Fully Sharded Data Parallel)**|Efficient distributed training|Combines benefits of data and model parallelism|Implementation complexity and potential communication overhead|
 |**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
 |**Mixed-Precision Training Mechanics**|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
 |**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
@@ -166,7 +166,7 @@
 * [Fully Sharded Data Parallel (FSDP)](https://engineering.fb.com/2021/07/15/open-source/fsdp/) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
 * [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
 * QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
-* QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes.
+* QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimizers to manage memory spikes.
 
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
 
@@ -191,14 +191,14 @@
 |GPU|20GB|24GB|32GB|48GB|> 80GB|
 |-|-|-|-|-|-|
 |AMD|Radeon RX 7900 XT|**Radeon RX 7900 XTX**|Radeon Pro W7800|Radeon Pro W7900|MI300 (128GB or 192GB)|
-|Nvida|RTX A4500, RTX 4000 Ada|RTX 4090, RTX A5000, RTX A5500, RTX 4500 Ada|RTX 5000 Ada|RTX A6000, RTX 6000 Ada, RTX 5880 Ada|H100 (80GB)|
+|Nvidia|RTX A4500, RTX 4000 Ada|RTX 4090, RTX A5000, RTX A5500, RTX 4500 Ada|RTX 5000 Ada|RTX A6000, RTX 6000 Ada, RTX 5880 Ada|H100 (80GB)|
 
 ### AMD GPUs
 
 * [AMD Radeon 7900 XT/XTX Inference Performance Comparisons](https://www.reddit.com/r/LocalLLaMA/comments/191srof/amd_radeon_7900_xtxtx_inference_performance/)
 * [AMD GPU guide (now w/ ROCm info)](https://llm-tracker.info/howto/AMD-GPUs)
 * Lamini makes AMD Instinct GPUs available through the [LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe) in both desktop and rack-mount server configurations.
-* [ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
+* [ROCm on Radeon](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
 * [LLM Worksheet](https://docs.google.com/spreadsheets/d/1kT4or6b0Fedd-W_jMwYpb63e1ZR3aePczz3zlbJW-Y4/edit?gid=752855929#gid=752855929)
 
 ### NVLink VRAM Pooling
@@ -255,7 +255,7 @@
 |-|-|
 |**Google's BERT (Bidirectional Encoder Representations from Transformers)**|Google trained BERT using a distributed setup across multiple TPUs (Tensor Processing Units). TPUs are specialized hardware accelerators for machine learning workloads, and they can be used in a multi-node configuration to accelerate training. Google's use of TPUs in a distributed manner significantly reduced the time required to train BERT on massive text corpora.|
 |**OpenAI's GPT-3**|GPT-3, one of the largest language models, was trained by OpenAI using a large cluster of GPUs across multiple nodes. OpenAI used NVIDIA V100 GPUs in a distributed setup to manage the immense computational load required to train a model with 175 billion parameters. The training process involved sophisticated data and model parallelism techniques to efficiently utilize the hardware resources.|
-|**Microsoft's Turing-NLG (Natural Language Generation)**|Microsoft's Turing-NLG, another large-scale language model, was trained on a distributed system of NVIDIA DGX-2 nodes. Each DGX-2 node contains 16 NVIDIA V100 GPUs, and the distributed setup allowed Microsoft to train the model on a vast amount of data, using techniques like data parallelism and model parallelism to scale the training across multiple nodes.
+|**Microsoft's Turing-NLG (Natural Language Generation)**|Microsoft's Turing-NLG, another large-scale language model, was trained on a distributed system of NVIDIA DGX-2 nodes. Each DGX-2 node contains 16 NVIDIA V100 GPUs, and the distributed setup allowed Microsoft to train the model on a vast amount of data, using techniques like data parallelism and model parallelism to scale the training across multiple nodes.|
 |**DeepMind's AlphaStar**|Although not a language model, DeepMind's AlphaStar is a notable example of distributed training in reinforcement learning. AlphaStar was trained using a multi-node setup with thousands of TPUs to play the game StarCraft II at a superhuman level. The training process involved complex distributed systems to handle the massive amount of data and computation required.|
 |**Facebook AI's RoBERTa**|RoBERTa, a robustly optimized BERT approach, was trained on a distributed setup using PyTorch and NVIDIA GPUs. Facebook AI Research (FAIR) used a large number of GPU nodes to train RoBERTa on diverse datasets, employing techniques like mixed precision training and gradient accumulation to optimize performance across the distributed system.|
 

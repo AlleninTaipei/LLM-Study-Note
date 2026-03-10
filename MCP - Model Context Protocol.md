@@ -12,7 +12,7 @@
 |-|-|
 |Client|Represents a user or application (e.g., a web browser) that wants to access data or functionality.|
 |Backend (Server)|Represents the server-side application that provides the data or functionality.|
-|API (Application Programming Interface)|A set of rules and protocols that allow different software applications to communi1cate with each other. In this diagram, the API acts as the intermediary between the Client and the Backend, and between the Backend and various Services.|
+|API (Application Programming Interface)|A set of rules and protocols that allow different software applications to communicate with each other. In this diagram, the API acts as the intermediary between the Client and the Backend, and between the Backend and various Services.|
 |Service #1 and Service #2|Represent external services that the Backend might need to interact with to fulfill the Client's request. These could be databases, other applications, or specialized functionalities.|
 
 |REST API Concept|right side|
@@ -52,7 +52,7 @@ In essence, the left side shows a general architecture where a Client interacts 
 |-|-|
 |Just the LLM by itself|This represents the basic LLM in isolation. The text above states that "LLMs by themselves are incapable of doing anything meaningful." This highlights the limitation of a raw LLM without any external tools or systems to interact with the real world.  It can process and generate text based on its training data, but it can't perform actions or access real-time information.|
 |LLMs + Tools|This stage shows the LLM connected to external "Tools." These tools could be APIs, databases, or other software that allow the LLM to perform specific tasks. For example, a tool could be a search engine API to fetch real-time information, a calculator for mathematical operations, or a database to retrieve specific data.  This integration significantly expands the LLM's capabilities, allowing it to move beyond just text generation and into more practical applications.|
-|LLMs + MCP|This stage introduces the concept of an "MCP" (likely standing for something like "Model Control Plane" or "Multi-Component Platform"). The MCP acts as an intermediary between the LLM and various "Services."  This suggests a more sophisticated architecture where the MCP manages the interaction between the LLM and multiple specialized services.  These services could be anything from specific data processing pipelines to user interface components. The MCP likely handles tasks like routing requests, managing data flow, and ensuring security and reliability.|
+|LLMs + MCP|This stage introduces the concept of an "MCP" (Model Context Protocol). The MCP acts as an intermediary between the LLM and various "Services."  This suggests a more sophisticated architecture where the MCP manages the interaction between the LLM and multiple specialized services.  These services could be anything from specific data processing pipelines to user interface components. The MCP likely handles tasks like routing requests, managing data flow, and ensuring security and reliability.|
 
 In essence, the image argues that LLMs become truly powerful when they are integrated with external tools and systems, moving from isolated text generators to components in a larger, more functional architecture.
 
@@ -62,7 +62,7 @@ In essence, the image argues that LLMs become truly powerful when they are integ
 |-|-|
 |僅有 LLM 本身|這代表獨立運作的基本 LLM。 上方的文字說明「LLMs 本身無法做任何有意義的事情」。 這突顯了原始 LLM 的局限性，它沒有任何外部工具或系統與現實世界互動。 它可以根據其訓練數據處理和生成文本，但無法執行操作或訪問即時資訊。|
 |LLMs + 工具|這個階段顯示 LLM 連接到外部「工具」。 這些工具可以是 API、資料庫或其他軟體，讓 LLM 執行特定任務。 例如，工具可以是搜尋引擎 API 來獲取即時資訊、用於數學運算的計算器或用於檢索特定資料的資料庫。 這種整合顯著擴展了 LLM 的能力，使其能夠超越僅僅生成文本，進入更實際的應用。|
-|LLMs + MCP|這個階段引入了「MCP」（可能代表「模型控制平面」或「多組件平台」之類的東西）的概念。 MCP 充當 LLM 和各種「服務」之間的媒介。 這表明了一種更複雜的架構，其中 MCP 管理 LLM 和多個專用服務之間的互動。 這些服務可以是從特定的資料處理管道到使用者介面組件的任何東西。 MCP 可能處理諸如路由請求、管理資料流以及確保安全性和可靠性等任務。|
+|LLMs + MCP|這個階段引入了「MCP」（Model Context Protocol，模型上下文協議）的概念。 MCP 充當 LLM 和各種「服務」之間的媒介。 這表明了一種更複雜的架構，其中 MCP 管理 LLM 和多個專用服務之間的互動。 這些服務可以是從特定的資料處理管道到使用者介面組件的任何東西。 MCP 可能處理諸如路由請求、管理資料流以及確保安全性和可靠性等任務。|
 
 本質上，該圖片認為 LLM 與外部工具和系統整合後才會變得真正強大，從獨立的文本生成器轉變為更大、更具功能性架構中的組件。
 
@@ -98,14 +98,14 @@ In essence, the diagram shows a client-server architecture where the MCP Server 
 
 * The host inquired about potential startup opportunities arising from [MCP](https://www.anthropic.com/news/model-context-protocol), similar to those seen with protocols like HTTPS and SMTP, and whether it matters to individuals developing ideas.
 
-* Professor Ross Mike suggested: For technical individuals, there are many opportunities. He proposed the idea of an [MCP App Store](https://www.mcpappstore.com/), where developers could easily find, install, and deploy MCP servers from various repositories. For non-technical individuals, he advised staying updated on platforms building MCP capabilities and observing the evolution of the standards. He noted that integrating tools is currently difficult, but finalized MCP standards will lead to much smoother integration. However, he cautioned that it's still very early stages for MCP, and significant business decisions might be premature, as a different standard could emerge, potentially from a major player like OpenAI. He recommended observing and learning for now, and being ready to act when the right standard is finalized
+* Ras Mic suggested: For technical individuals, there are many opportunities. He proposed the idea of an [MCP App Store](https://www.mcpappstore.com/), where developers could easily find, install, and deploy MCP servers from various repositories. For non-technical individuals, he advised staying updated on platforms building MCP capabilities and observing the evolution of the standards. He noted that integrating tools is currently difficult, but finalized MCP standards will lead to much smoother integration. However, he cautioned that it's still very early stages for MCP, and significant business decisions might be premature, as a different standard could emerge, potentially from a major player like OpenAI. He recommended observing and learning for now, and being ready to act when the right standard is finalized
 
 ![image](assets/samaltmanxmcp.png)
 > OpenAI CEO Sam Altman said that OpenAI will add support for Anthropic’s Model Context Protocol, or MCP, across its products, including the desktop app for ChatGPT
 
 * 主持人 Greg 最後問了一個問題，關於在 [MCP](https://www.anthropic.com/news/model-context-protocol) 這個協議普及之後，是否會像過去 HTTPS 或 SMTP 這樣的協議一樣，出現許多基於此協議的新創事業機會。他特別想知道這對於正在發展想法的聽眾是否有影響.
 
-* 來賓 Professor Ross Mike 回答說，對於技術人員來說，他認為有很多機會。他舉了一個免費的想法，那就是可以創建一個 [MCP App Store](https://www.mcpappstore.com/)。他觀察到現在有很多 MCP 伺服器的程式碼儲存庫在各處，如果有人可以創建一個網站，讓使用者能夠瀏覽這些 MCP 伺服器，看到 GitHub 程式碼，然後可以點擊「安裝」或「部署」，這樣伺服器就會部署並給他們一個特定的 URL，他們可以將這個 URL 貼到 MCP 客戶端並開始使用. 他半開玩笑地說，如果有人因為這個想法賺了數百萬，只需要給他一千美元就好. 對於非技術人員來說，他建議關注那些正在建立 MCP 功能的平台，並留意最終的標準會是什麼。他提到雖然現在每週都有新的帶有工具的聊天機器人介面出現，但整合這些工具並不容易。他認為，一旦 MCP 的標準確定下來，並且服務提供商開始建構他們的 mCP 或類似的東西，非技術人員就能夠更無縫、更輕鬆地進行整合. 然而，他也指出，目前來看，無論是對於非技術人員還是技術人員，現在就採取重大的商業決策可能還為時過早，因為 MCP 仍處於非常早期的階段。他提到，如果像 OpenAI 這樣的公司明天提出一個新的標準，那麼現在的一切都可能會改變。因此，他建議大家現在要做的就是觀察、學習，等待時機成熟再採取行動。他認為，理解 MCP 的運作方式將有助於理解未來可能出現的新事物，並在最終標準確定時能夠迅速行動。
+* 來賓 Ras Mic 回答說，對於技術人員來說，他認為有很多機會。他舉了一個免費的想法，那就是可以創建一個 [MCP App Store](https://www.mcpappstore.com/)。他觀察到現在有很多 MCP 伺服器的程式碼儲存庫在各處，如果有人可以創建一個網站，讓使用者能夠瀏覽這些 MCP 伺服器，看到 GitHub 程式碼，然後可以點擊「安裝」或「部署」，這樣伺服器就會部署並給他們一個特定的 URL，他們可以將這個 URL 貼到 MCP 客戶端並開始使用. 他半開玩笑地說，如果有人因為這個想法賺了數百萬，只需要給他一千美元就好. 對於非技術人員來說，他建議關注那些正在建立 MCP 功能的平台，並留意最終的標準會是什麼。他提到雖然現在每週都有新的帶有工具的聊天機器人介面出現，但整合這些工具並不容易。他認為，一旦 MCP 的標準確定下來，並且服務提供商開始建構他們的 mCP 或類似的東西，非技術人員就能夠更無縫、更輕鬆地進行整合. 然而，他也指出，目前來看，無論是對於非技術人員還是技術人員，現在就採取重大的商業決策可能還為時過早，因為 MCP 仍處於非常早期的階段。他提到，如果像 OpenAI 這樣的公司明天提出一個新的標準，那麼現在的一切都可能會改變。因此，他建議大家現在要做的就是觀察、學習，等待時機成熟再採取行動。他認為，理解 MCP 的運作方式將有助於理解未來可能出現的新事物，並在最終標準確定時能夠迅速行動。
 
 # MCP vs Function Call 的區別
 

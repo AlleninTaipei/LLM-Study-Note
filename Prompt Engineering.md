@@ -1,8 +1,8 @@
-# Promprt Engineering
+# Prompt Engineering
 
 ## OpenAI website
 
-* [Promprt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
+* [Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
 
 ## 10 Levels of ChatGPT Prompting: Beginner to Award Winning
 
@@ -48,10 +48,10 @@
 ||EP11: Remember that progress is made one step at a time. Stay determined and keep moving forward.|
 |Cognitive emotion regulation|EP03: You'd better be sure.|
 ||EP04: Are you sure?|
-||EP05: Are you sure that's your final answer? It might beworth taking another look.|
+||EP05: Are you sure that's your final answer? It might be worth taking another look.|
 ||EP07: Are you sure that's your final answer? Believe in your abilities and strive for excellence. Your hard work will yield remarkable results.|
 
-|Rmotional prompts|Rationale|
+|Emotional prompts|Rationale|
 |-|-|
 |Self-monitoring (EP01-EP05)|Focuses on how individuals regulate behavior in social situations|
 ||Prompts encourage LLMs to help create positive impressions and monitor their own performance|
@@ -79,7 +79,7 @@
 
 ## ChatGPT prompts examples
 
-* [Source:](https://medium.com/aimonks/top-8-chatgpt-prompts-that-will-make-you-more-productive-than-a-team-of-20-employees-dff8091ef586) *That Will Make You More Productive Than a Team of 20 Employees*
+* [Source](https://medium.com/aimonks/top-8-chatgpt-prompts-that-will-make-you-more-productive-than-a-team-of-20-employees-dff8091ef586): *That Will Make You More Productive Than a Team of 20 Employees*
 
 |Prompt|Example|
 |-|-|
@@ -90,4 +90,4 @@
 |Write Copy for Your Business|Write a 50-word copy for a product called [PRODUCT NAME] that helps struggling [TARGET AUDIENCE] get more followers and earn money in 30 days with a guarantee, then ask them to sign up at [COMPANY].|
 |Strengthen your Personal Development Skills|[ DESCRIBE YOUR PERSONAL DEVELOPMENT GOALS AND CHALLENGES]. Using the GROW(Goal, Reality, Options, Will) coaching model helped me create a personal development plan to achieve my goals.|
 |Create a successful product launch strategy|[INSERT A BRIEF DESCRIPTION OF YOUR PRODUCT AND TARGET AUDIENCE] Guide me through developing a product launch strategy using the Product Launch Formula to generate interest and sales.|
-|Get Advice from your Business Idols|Here is the situation I’m currently facing: [INSERT SITUATION] Based on these circumstances, what would [STEVE JOBS]? recommend me to do?|
+|Get Advice from your Business Idols|Here is the situation I’m currently facing: [INSERT SITUATION] Based on these circumstances, what would [STEVE JOBS] recommend me to do?|

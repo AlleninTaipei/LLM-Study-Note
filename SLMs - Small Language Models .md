@@ -6,19 +6,18 @@
 ## Introduction
 
 * In the dynamic world of artificial intelligence (AI), language models are crucial tools that enhance our ability to understand and generate human-like language. These models, trained on vast amounts of text data, are essential for tasks such as content generation, translation, and question answering. However, not all language models are created equal; they vary significantly in size and capability. This article explores the differences between small language models (SLMs) and large language models (LLMs), examining their strengths, weaknesses, and appropriate applications.
-* Understanding Language Models
-Language models are AI programs that process and manipulate human language by learning from extensive text datasets. They rely on machine learning algorithms to identify statistical patterns, enabling them to predict and generate coherent text based on context. The quality of the data and the size of the model's parameters largely determine its performance.
+* Understanding Language Models: Language models are AI programs that process and manipulate human language by learning from extensive text datasets. They rely on machine learning algorithms to identify statistical patterns, enabling them to predict and generate coherent text based on context. The quality of the data and the size of the model's parameters largely determine its performance.
 
 ## Small Language Models (SLMs)
 
-* Small language models, despite being complex systems, use fewer parameters than their larger counterparts. Typically having millions or tens of millions of parameters, they are considered "small" in the modern AI landscape.
+* Small language models, despite being complex systems, use fewer parameters than their larger counterparts. Typically having hundreds of millions to a few billion parameters, they are considered "small" in the modern AI landscape.
 
 |Advantages|Notes|
 |-|-|
 |Efficiency|SLMs require fewer computing resources, making them efficient and cost-effective. They are particularly suitable for specialized tasks after focused training.|
 |Lower Cost|Due to their modest hardware requirements, SLMs enable rapid deployment at reduced costs.|
 |Domain Specificity|In resource-constrained environments, SLMs excel due to their precision and efficiency, especially when trained on specific domains.|
-|Real-World Example|Phi-3: Developed by Microsoft, this SLM is designed to evaluate coding, language, and math capabilities. It is easily fine-tuned and ideal for applications running on smart devices.|
+|Real-World Example|Phi-3: Developed by Microsoft, this SLM is designed to excel at coding, language, and math capabilities. It is easily fine-tuned and ideal for applications running on smart devices.|
 
 ## Large Language Models (LLMs)
 
