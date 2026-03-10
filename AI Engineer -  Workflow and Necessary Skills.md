@@ -45,7 +45,7 @@ An AI engineer's workflow encompasses a broad range of activities beyond just mo
 
 ## Required Skills for AI Professionals
 
-|Required Skills for AI Professionals|Descrption|
+|Required Skills for AI Professionals|Description|
 |-|-|
 |**Essential Skills**|**Understanding GitHub**: Ability to utilize and adapt existing projects.|
 ||**Deep Learning Tools**: Proficiency in TensorFlow or PyTorch.|
