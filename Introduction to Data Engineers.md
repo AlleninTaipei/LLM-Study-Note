@@ -69,7 +69,8 @@
 |-|-|
 |Manufacturing process data|Manufacturing involves complex processes with many variables.|
 ||A Data Engineer could help collect, store, and prepare data from production lines for analysis. This could lead to insights for improving yield, reducing defects, and optimizing production.|
-|Supply chain management|The semiconductor industry has complex global supply chains.|A Data Engineer could help integrate data from various suppliers, inventory systems, and logistics partners.This could improve forecasting, reduce stock-outs, and optimize inventory levels.|
+|Supply chain management|The semiconductor industry has complex global supply chains.|
+||A Data Engineer could help integrate data from various suppliers, inventory systems, and logistics partners. This could improve forecasting, reduce stock-outs, and optimize inventory levels.|
 |Quality control|Product development and manufacturing require rigorous testing.|
 ||A Data Engineer could build systems to collect and analyze test data at scale. This could help identify patterns in defects and improve overall product quality.|
 |Customer feedback and product performance|Data from customer returns, warranty claims, and performance benchmarks could be valuable.|
