@@ -24,7 +24,7 @@
 
 ## GGUF Model File
 
-[GGUF](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md) stands for GPT-Generated Unified Format, which is a file format used for storing large language models, particularly those based on the GPT (Generative Pre-trained Transformer) architecture.
+[GGUF](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md) stands for GGML Unified Format (where GG refers to the initials of its creator, Georgi Gerganov), which is a file format used for storing large language models for efficient inference.
 
 ```python
 enum ggml_type: uint32_t {
@@ -393,7 +393,7 @@ In this example, you start with a pre-trained LLaMA model in a GGUF file. After 
 
 [H2O LLM Studio](https://github.com/h2oai/h2o-llmstudio) - A framework and no-code GUI designed for fine-tuning state-of-the-art large language models (LLMs).
 
-I found two files, `train.pq` and `train_full.pq`, when Ielected the Datasets function and chose the View Datasets option.
+I found two files, `train.pq` and `train_full.pq`, when I selected the Datasets function and chose the View Datasets option.
 
 ### Parquet vs CSV
 
@@ -412,7 +412,7 @@ The choice between Parquet and CSV is contingent on the specific requirements, u
 |Schema Storage|Parquet stores the file schema in the file metadata, eliminating the need for supplying or inferring the schema, which can be tedious or error-prone.||
 |Column Metadata|Parquet stores metadata statistics for each column and allows users to add their own column metadata. This feature enables Parquet predicate pushdown filtering, which is supported by Dask & Spark cluster computing frameworks.||
 |Complex Column Types|Parquet supports complex column types like arrays, dictionaries, and nested schemas, which cannot be reliably stored in simple file formats like CSV.||
-|Immutability|Parquet files are immutable This characteristic means that while it's easy to add a row to a CSV file, it's not as straightforward with a Parquet file.||
+|Immutability|Parquet files are immutable. This characteristic means that while it's easy to add a row to a CSV file, it's not as straightforward with a Parquet file.||
 |Data Lakes|In a big data environment, optimal disk layout of data is crucial. Parquet's ability to work with hundreds or thousands of files, disk partitioning, and compacting small files makes it an ideal choice for data lakes.||
 |Conclusion|**Parquet is typically favored when dealing with large datasets, analytical workloads, and complex data types, as it provides superior storage efficiency and query performance.**|CSV files are typically used for simpler tabular data, data interchange, and scenarios where human readability and ease of use are paramount.|
 
@@ -493,7 +493,7 @@ Index: []
 
 ### Understanding and Viewing Training Data for DPO and Causal Language Modeling in LLM Fine-Tuning
 
-|DPO Modeling (Distillation for Preference Optimization)|Causal Language Modeling|
+|DPO Modeling (Direct Preference Optimization)|Causal Language Modeling|
 |-|-|
 |DPO is a training technique often used to fine-tune models based on user preferences or predefined criteria. In the context of train.pq, this method could involve the following steps:|Causal Language Modeling is a technique used to train language models to predict the next word in a sequence, given the previous words. This method ensures that the model learns the structure and context of language in a way that mimics how humans read or generate text. In the context of train_full.pq, this approach involves:|
 |Distillation: The process of training a smaller or more efficient model to mimic the behavior of a larger, more complex model. This smaller model is "distilled" from the larger one by training it on the outputs of the larger model, potentially improving efficiency and performance.|Autoregressive Modeling: The model predicts the next word in a sequence based on the previous words. This is typically done in a left-to-right fashion, meaning the model generates one word at a time, conditioned on all previous words.|
@@ -583,7 +583,7 @@ print(f"Saved original dataset to {output_file_original}")
 
 When using or referring to this format, it's often helpful to briefly describe its structure (i.e., a JSON list of objects, each with "instruction" and "output" fields) to avoid any potential confusion.
 
-|Useage example|Description|
+|Usage example|Description|
 |-|-|
 |OpenAI's GPT models|They use a similar format for their fine-tuning datasets, often referred to as "prompt-completion pairs".|
 |InstructGPT|This was one of the early adopters of instruction-tuning, using a similar format.|
