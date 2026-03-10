@@ -12,12 +12,12 @@
 |-|-|-|
 |**Definition**|Creates data resembling its training|Possesses human-like cognitive abilities|
 |**Examples**|Generative Adversarial Networks, Large Language Models (e.g., GPT models)|Theoretical, depicted in science fiction|
-|**Capabilities**|||
+|**Capabilities**|—|—|
 |Data Creation|Generates synthetic data|Broad understanding without specific training|
 |Content|Produces art, music, writing|Adapts to new tasks easily|
 |Language|Understands and generates human text|Learns autonomously|
-|Simulations|Creates realistic digital environments||	
-|**Challenges**||
+|Simulations|Creates realistic digital environments|—|
+|**Challenges**|—|—|
 |Quality Control|Ensuring consistent, high-quality output|Building a comprehensive cognitive model|
 |Bias|Mitigating biases from training data|Ensuring safe behavior|
 |Resources|Requires significant computational power|Managing ethical and societal impacts|
@@ -42,7 +42,7 @@
 
 |Components of Neural Networks|How It Works|Industry Applications|Limitations|
 |-|-|-|-|
-|**Data inputs:** Data that you wish to process<br> **Weights:** Determine the importance of each input on the outcome<br>**Biases:** Represents the amount of assumptions on output<br>**Activation functions:** Determine whether the data will be transferred to the next layer<br>**Outputs:** Decisions made by the deep learning program|1. Data process through weighted channels and neuroses containing bias<br>2. The neuron may or may not be activated based on the activation function<br>3. If activated, data will process to the next layer<br>4. Procsess repeats until on output is produced<br> **Does not require human intervention to learn from mistakes.**|1. Google DeepMind’s AlphaGo program<br>2. Amazon Alexa<br>3. Self-driving Vehicles<br>4. Predicting earthquakes<br>5. Adding sounds to silent movies<br>|Requires significant time<br>Requires GPUs and vast computing power|
+|**Data inputs:** Data that you wish to process<br> **Weights:** Determine the importance of each input on the outcome<br>**Biases:** Represents the amount of assumptions on output<br>**Activation functions:** Determine whether the data will be transferred to the next layer<br>**Outputs:** Decisions made by the deep learning program|1. Data process through weighted channels and neuroses containing bias<br>2. The neuron may or may not be activated based on the activation function<br>3. If activated, data will process to the next layer<br>4. Process repeats until on output is produced<br> **Does not require human intervention to learn from mistakes.**|1. Google DeepMind’s AlphaGo program<br>2. Amazon Alexa<br>3. Self-driving Vehicles<br>4. Predicting earthquakes<br>5. Adding sounds to silent movies<br>|Requires significant time<br>Requires GPUs and vast computing power|
 
 ### Key Differences Between Machine Learning And Deep Learning
 
@@ -95,8 +95,8 @@
 
 * GPTs are based on the transformer architecture, pre-trained on large datasets of unlabeled text, and capable of generating novel human-like content. As of 2023, most large language models share these characteristics and are often referred to broadly as GPTs.
 * **In November 2022, OpenAI launched ChatGPT**, an online chat interface powered by an instruction-tuned language model. This model was trained similarly to InstructGPT, utilizing **Reinforcement Learning from Human Feedback (RLHF)**. Human AI trainers conducted conversations by playing both the user and the AI, combining this new dialogue dataset with the InstructGPT dataset to create a conversational format suitable for a chatbot.
-* Microsoft's Bing Chat: Uses OpenAI's GPT-4 as part of a broader close collaboration between OpenAI and Microsoft.
-* Google's Bard: Initially based on Google's LaMDA family of conversation-trained language models, with plans to transition to their PaLM models.
+* Microsoft Copilot (formerly Bing Chat): Uses OpenAI's GPT-4 as part of a broader close collaboration between OpenAI and Microsoft.
+* Google Gemini (formerly Bard): Initially based on Google's LaMDA family of conversation-trained language models, with plans to transition to their PaLM models.
 
 ---
 
@@ -108,17 +108,23 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 * **Parameters**: Think of parameters as the pieces of information the model learns during its training phase. They're like the building blocks that help the model understand language and generate responses. These parameters are adjusted and fine-tuned through a process called training, where the model learns from a large dataset of text.
 * **Tokens:** Tokens are the basic units of language that the model works with. In simple terms, you can think of them as words, punctuation marks, or even parts of words. For example, in the sentence "The cat is sleeping," each word ("The," "cat," "is," "sleeping") is a token. But tokens can also represent parts of words or special characters, like prefixes or suffixes.
 
-### Mathematical formula metaphorically decribing parameters in a model
+### Mathematical formula metaphorically describing parameters in a model
 
 * Total Parameters = (Ingredients + Cooking Techniques) × Complexity Level Ingredients
 * Just like in a recipe, different ingredients represent different aspects of language learning, such as vocabulary, grammar rules, context understanding, etc. Cooking Techniques: These represent the methods used to combine and process the ingredients, akin to the algorithms and training processes used in building the language model. Complexity Level: This factor represents how intricate and nuanced the final dish (or text generation) needs to be. More complex dishes require more ingredients and advanced cooking techniques. So, the total number of parameters in a language model can be seen as a result of combining various ingredients with specific cooking techniques, all tailored to achieve a certain level of linguistic complexity.
+
+*Note: The formula above is a conceptual metaphor for building intuition — it is not an actual mathematical equation used in model design.*
 
 ### Let's use a metaphorical math formula to describe the parameters in an investment expert model: 
 
 * **Total Parameters = (Financial Data + Analytical Algorithms) × Risk Appetite Financial Data:**
 * Just like in investing, different types of financial data serve as the raw ingredients for analysis, including stock prices, company financial reports, market trends, etc. Analytical Algorithms: These represent the mathematical models and algorithms used to process and analyze the financial data, such as regression analysis, machine learning models, sentiment analysis, etc. Risk Appetite: This factor represents the investor's willingness to take on risk. It influences the complexity and depth of analysis required, as well as the types of investments recommended. So, the total number of parameters in an investment expert model can be seen as a result of combining financial data with analytical algorithms, all tailored to match a particular investor's risk appetite and investment goals.
 
-### An example for temprature
+*Note: The formula above is a conceptual metaphor for building intuition — it is not an actual mathematical equation used in model design.*
+
+### An example for temperature
+
+> **Note:** The code below uses the legacy `openai.Completion.create` endpoint with `text-davinci-003`, which has been retired. It is kept here for conceptual illustration of the `temperature` parameter only.
 
         import openai
     
@@ -228,7 +234,8 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
             print("Oops! Model needs improvement.")
 
     # Main loop for generating responses and collecting feedback
-    
+    # Note: the code below is pseudocode for illustration purposes.
+    # `generate_response` is not a real method on TextGenerationModel — only `call` is defined above.
     while True:
         user_input = input("Enter your query: ")
     
@@ -280,10 +287,10 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
 
 ## How to Use AI Tools to Boost Your Productivity
 
-### Promprt Engineering
+### Prompt Engineering
 
 * **Prompt, Refine, Repeat**, if your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
-* [Promprt Engineering](https://www.promptingguide.ai/)
+* [Prompt Engineering](https://www.promptingguide.ai/)
 
 ### Using AI for Day-to-Day Tasks
 
