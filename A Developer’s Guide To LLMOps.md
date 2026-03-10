@@ -11,13 +11,13 @@ A prompt is simply the specific task a user provides to a language model, and th
 |Prompt Engineering|Prevailing Approaches|
 |-|-|
 |**Few-Shot Prompting**|The user provides a few examples of the task that the large language model should perform as well as a description of the task.|
-|**Instructor-Based Prompting**|Base on instructing the large language model to act as a specific person while performing the desired task.|
+|**Instructor-Based Prompting**|Based on instructing the large language model to act as a specific person while performing the desired task.|
 |**Chain of Thought Prompting / CoT Prompting**|To accomplish complex tasks where the user breaks down a specific task into smaller sub-tasks and instructs the language model to perform small tasks in an incremental order in order to get to the final desired outcome.|
 |**Automatic Prompt Generation**|The user simply describes the task that they want to accomplish within a few sentences and asks the language model to come up with different options. The user then searches for the best prompt.|
 
 ### Prompt Templates
 
-With pre-amble texts that is placed right before a user’s prompt, LLM developers can standardize the output format and quality regardless of the simplicity of the prompt provided by the user.
+With preamble text that is placed right before a user’s prompt, LLM developers can standardize the output format and quality regardless of the simplicity of the prompt provided by the user.
 
 ```plaintext
 prompt_template = """
@@ -38,7 +38,7 @@ Within your LLM application, you can have different prompt templates and user in
 
 Collect relevant data, utilize various methods to process it, and tweak the LLM to ensure that it can deliver optimal responses within your business context. 
 
-LLM agents assists users in generating responses quickly by creating a sequence of related prompts and answers in a logical order.
+LLM agents assist users in generating responses quickly by creating a sequence of related prompts and answers in a logical order.
 
 [LangChain](https://python.langchain.com/v0.2/docs/introduction/) is a framework for developing applications powered by large language models (LLMs).
 
@@ -162,7 +162,7 @@ LLM orchestration frameworks (like LangChain or LlamaIndex) are trying to enable
 
 **Example**: Let’s give the scenario that you are a Software Engineer at an e-commerce company which recently pushed an LLM-powered chatbot into production. Your chatbot, which is used to interact with customers who have purchased from your company’s website, uses a search and retrieval system to create responses for the customer
 
-**Implmentation**: A document is broken into chunks, these chunks are embedded into a vector store, and the search and retrieval process pulls on this context to shape LLM
+**Implementation**: A document is broken into chunks, these chunks are embedded into a vector store, and the search and retrieval process pulls on this context to shape LLM
 
 **Definition of LLM Observability Terms for Reference**
 
@@ -202,7 +202,7 @@ If you are building a RAG system, you are adding recent knowledge to a LLM appli
 |**Data Indexing**|Before RAG can retrieve information, the data must be aggregated and organized in an index. This index acts as a reference point for the retrieval engine.|
 |**Input Query Processing**|The user’s input is processed and understood by the system, forming the basis of the search query for the retrieval engine.|
 |**Search and Ranking**|The retrieval engine searches the indexed data and ranks the results in terms of relevance to the input query.|
-|**Prompt Augmentation**|The most relevant information is then combined with the original query. This augmented prompt serves as a richer source for response generation.
+|**Prompt Augmentation**|The most relevant information is then combined with the original query. This augmented prompt serves as a richer source for response generation.|
 |**Response Generation**|Finally, the generation engine uses this augmented prompt to create an informed and contextually accurate response.|
 |**Evaluation**|A critical step in any pipeline is checking how effective it is relative to other strategies, or when you make changes. Evaluation provides objective measures on accuracy, faithfulness, and speed of responses.|
 
@@ -217,5 +217,5 @@ If you are building a RAG system, you are adding recent knowledge to a LLM appli
 
 Overall, LLM observability is crucial for maintaining the quality and reliability of LLM applications, especially as they scale and handle more complex tasks. By providing a comprehensive view of the model's performance, observability tools help ensure that the LLM meets the needs and expectations of users and stakeholders.
 
-LLMOps (Large Language Model Operations), developers can optimize their LLMs to handle specific tasks, efficiently manage prompts, and monitor model performance in real-time. As the adoption of LLMs continues to expand, LLM observability allows for fine-tuning and iterative prompt engineering workflows. By identifying problematic clusters of responses, developers can refine their prompt engineering techniques or fine-tune the model to enhance its performance. This iterative process ensures continuous improvement of the LLM application, leading to a better end-user experience.
+With LLMOps (Large Language Model Operations), developers can optimize their LLMs to handle specific tasks, efficiently manage prompts, and monitor model performance in real-time. As the adoption of LLMs continues to expand, LLM observability allows for fine-tuning and iterative prompt engineering workflows. By identifying problematic clusters of responses, developers can refine their prompt engineering techniques or fine-tune the model to enhance its performance. This iterative process ensures continuous improvement of the LLM application, leading to a better end-user experience.
 
