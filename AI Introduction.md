@@ -30,7 +30,7 @@
 
 |Machine Learning Type|Notes|Examples|
 |-|-|-|
-|**Supervised Learning**|Uses labeled data where each input is associated with a correct output<br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees<br>Regression: Linear regression, logistic regression|
+|**Supervised Learning**|Uses labeled data where each input is associated with a correct output<br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees, logistic regression<br>Regression: Linear regression|
 |**Unsupervised Learning**| Analyzes unlabeled data to find hidden patterns<br>No human intervention needed for labeling data|Clustering: K-means clustering, hierarchical clustering<br>Association: Apriori algorithm, market basket analysis|
 |**Semi-Supervised Learning**|Combines techniques from supervised and unsupervised learning for scenarios with limited labeled data and abundant unlabeled data|Generative Adversarial Network (GAN)|
 |**Reinforcement Learning**|Agent learns to interact with an environment through trial and error<br>Receives rewards or penalties based on actions<br>Learns optimal actions to maximize cumulative rewards|AlphaGo: Learned to play Go at a world-champion level|
@@ -42,7 +42,7 @@
 
 |Components of Neural Networks|How It Works|Industry Applications|Limitations|
 |-|-|-|-|
-|**Data inputs:** Data that you wish to process<br> **Weights:** Determine the importance of each input on the outcome<br>**Biases:** Represents the amount of assumptions on output<br>**Activation functions:** Determine whether the data will be transferred to the next layer<br>**Outputs:** Decisions made by the deep learning program|1. Data process through weighted channels and neuroses containing bias<br>2. The neuron may or may not be activated based on the activation function<br>3. If activated, data will process to the next layer<br>4. Process repeats until on output is produced<br> **Does not require human intervention to learn from mistakes.**|1. Google DeepMind’s AlphaGo program<br>2. Amazon Alexa<br>3. Self-driving Vehicles<br>4. Predicting earthquakes<br>5. Adding sounds to silent movies<br>|Requires significant time<br>Requires GPUs and vast computing power|
+|**Data inputs:** Data that you wish to process<br> **Weights:** Determine the importance of each input on the outcome<br>**Biases:** Represents the amount of assumptions on output<br>**Activation functions:** Determine whether the data will be transferred to the next layer<br>**Outputs:** Decisions made by the deep learning program|1. Data process through weighted channels and neurons containing bias<br>2. The neuron may or may not be activated based on the activation function<br>3. If activated, data will process to the next layer<br>4. Process repeats until on output is produced<br> **Does not require human intervention to learn from mistakes.**|1. Google DeepMind’s AlphaGo program<br>2. Amazon Alexa<br>3. Self-driving Vehicles<br>4. Predicting earthquakes<br>5. Adding sounds to silent movies<br>|Requires significant time<br>Requires GPUs and vast computing power|
 
 ### Key Differences Between Machine Learning And Deep Learning
 
@@ -84,7 +84,7 @@
 
 |Types of Artificial Neural Network|Applications|
 |-|-|
-|**Feedforward Neural Networks (FNN)**|Information flows from the input to the output layer without cycles.Commonly used in tasks like image recognition, classification, and regression.|
+|**Feedforward Neural Networks (FNN)**|Information flows from the input to the output layer without cycles. Commonly used in tasks like image recognition, classification, and regression.|
 |**Convolutional Neural Networks (CNN)**|Primarily used for image analysis, CNNs use specialized layers such as convolutional and pooling layers to automatically detect and learn spatial hierarchies of features in images.|
 |**Generative Adversarial Networks (GAN)**|Consisting of a generator and a discriminator, GANs are used for tasks like image generation, style transfer, and data augmentation. The generator creates data, while the discriminator evaluates its authenticity.|
 |**Recurrent Neural Networks (RNN)**|Connections form cycles, allowing feedback loops. Suitable for tasks involving sequences, such as language processing, time series prediction, and speech recognition.|
@@ -197,7 +197,7 @@ It is a technique used to train AI models, particularly in situations where the 
 * **Step 3. Proximal Policy Optimization (PPO):** This is a deep reinforcement learning algorithm used to optimize the model’s policy (i.e., the way it behaves or decides on actions), trying to maximize the expected human-generated rewards.
 * **Iteration:** Steps 2 and 3 are repeated, with human feedback collected at each step to constantly refine the reward model and improve the policy.
 
-**OpenAI** has implemented RLHF in training some of its most advanced language models. For instance, models such as GPT-3.5, which is an iteration on GPT-3, and ChatGPT, a variant of GPT-3 specially fine-tuned for generating conversational text, have been trained using variations of the RLHF process. In these models, the RLHF technique is used to align the models’ responses more closely with human values and preferences, thus making them more useful and safer in practice.
+**OpenAI** has implemented RLHF in training some of its most advanced language models. For instance, models such as GPT-3.5, which is an iteration on GPT-3, and ChatGPT, a variant of GPT-3.5 specially fine-tuned for generating conversational text, have been trained using variations of the RLHF process. In these models, the RLHF technique is used to align the models’ responses more closely with human values and preferences, thus making them more useful and safer in practice.
 
 Here's an example of how RLHF could be implemented using Python, TensorFlow (a popular machine learning framework), and a simple interactive user interface.
 

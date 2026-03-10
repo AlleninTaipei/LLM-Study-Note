@@ -1,6 +1,6 @@
 # Understanding LLMs: A Comprehensive Overview from Training to Inference
 
-[Source:](https://arxiv.org/abs/2401.02038) *A Comprehensive Overview from Training to Inference*
+[Source](https://arxiv.org/abs/2401.02038): *A Comprehensive Overview of LLMs from Training to Inference*
 
 ## Introduction
 
@@ -19,7 +19,7 @@ The primary objective of this paper is to provide a comprehensive overview of LL
 |-|-|
 |**Background and Overview**|A machine learning approach used in NLP to guide pre-trained models to perform specific tasks through carefully designed prompts. Replaces the pre-train and fine-tune paradigm with pre-trained, prompts, and predictions. Allows models like GPT-3 to handle various tasks efficiently without updating underlying parameters.|
 |**Basic components and process of Prompt learning**|Involves prompt templates, answer mappings, and pre-trained language models. Common prompt templates include fill-in-the-blank and prefix-based generation. Answer mapping (Verbalizer) evaluates possible answers and maps them to appropriate categories. Workflow includes using pre-trained models, adding context with a mask position, projecting labels to label words, and bridging the gap between pre-training and fine-tuning.|
-|**Learning strategy**|Various strategies for prompt learning include pre-training then fine-tuning, tuning-free promotion, fixed LM prompt tuning, fixed prompt LM tuning, and combined prompt+LM tuning. The choice of strategy depends on task requirements, with each offering different benefits in terms of precision, resource efficiency, and control.|
+|**Learning strategy**|Various strategies for prompt learning include pre-training then fine-tuning, tuning-free prompting, fixed LM prompt tuning, fixed prompt LM tuning, and combined prompt+LM tuning. The choice of strategy depends on task requirements, with each offering different benefits in terms of precision, resource efficiency, and control.|
 
 ## Training of Large Language Models (LLMs)
 
@@ -77,14 +77,14 @@ The primary objective of this paper is to provide a comprehensive overview of LL
 |Fine-tuning LLMs involves three main approaches|Notes|
 |-|-|
 |**Supervised Fine-Tuning (SFT)**|Adjusts the model using labeled datasets to adapt to specific tasks. Instruction Tuning is a specific form of SFT, using (instruction, output) pairs to enhance model capabilities and controllability. Common datasets: static-hh, OIG, Self-Instruct, Natural Instructions, P3, Promptsource, WebGPT, Flan, MVPCorpus.|
-|**Alignment Tuning**|Ensures LLMs are helpful, honest, and harmless. Often uses Reinforcement Learning with Human Feedback (RLHF) to align model outputs with human intentions.Techniques include using human feedback to train reward models and employing Proximal Policy Optimization (PPO).|
+|**Alignment Tuning**|Ensures LLMs are helpful, honest, and harmless. Often uses Reinforcement Learning with Human Feedback (RLHF) to align model outputs with human intentions. Techniques include using human feedback to train reward models and employing Proximal Policy Optimization (PPO).|
 |**Parameter-Efficient Tuning**|Reduces computational and memory overhead by fine-tuning only a subset of model parameters. Methods include Low-Rank Adaptation (LoRA), Prefix Tuning, and P-Tuning, enabling efficient tuning even with limited resources.|
 
 ### Evaluation
 
 |Evaluating LLMs involves various methods to ensure performance and safety.|Notes|
 |-|-|
-|**Static testing dataset**|Datasets for validation include ImageNet, Open Images, GLUE, SuperGLUE, MMLU, CMMLU, XTREME, MATH, GSM8K, HumanEval, MBPP, and several others for reasoning and medical knowledge.|
+|**Static testing dataset**|Datasets for validation include GLUE, SuperGLUE, MMLU, CMMLU, XTREME, MATH, GSM8K, HumanEval, MBPP, and several others for reasoning and medical knowledge.|
 |**Open Domain Q&A Evaluation**|Uses datasets like SquAD and Natural Questions with metrics such as F1 score and Exact-Match accuracy (EM) to evaluate LLMs' question-answering abilities.|
 |**Security Evaluation**|Addresses potential biases, privacy protection, and robustness against adversarial attacks. Tools and methods to mitigate these issues include controlled text generation algorithms and privacy neuron detection and editing.|
 |**Evaluation Methods**|Combines automated metrics (e.g., BLEU, ROUGE, BERTScore) and manual evaluation to comprehensively assess LLM performance.|
@@ -104,7 +104,7 @@ Training large-scale LLMs is facilitated by distributed training frameworks that
 
 As large language models (LLMs) continue to scale, they demand significant computational resources and energy, leading to a focus on reducing their computational and storage costs while maintaining reasoning capabilities.
 
-|Efficient LLM inference through four main strategies|Notes|
+|Efficient LLM inference through five main strategies|Notes|
 |-|-|
 |**Model Compression**|**Knowledge Distillation**: Transfers knowledge from a large (teacher) model to a smaller (student) model by matching their outputs, providing more information than direct labels. Techniques like PKD and Tiny BERT improve this by using intermediate layers and various model components for better distillation.|
 ||**Model Pruning**: Removes redundant parts of a model's parameter matrices, categorized into unstructured (random weights) and structured pruning (specific patterns or units). Studies show structured pruning can retain model performance even when significant portions of the model are pruned.|
@@ -132,7 +132,7 @@ LLMs have a wide range of applications across various specialized domains. They 
 |-|-|
 |**Accessing Proprietary Models**|Utilizing robust proprietary models through open API services, such as ChatGPT, allows users to leverage powerful LLM capabilities without managing infrastructure.|
 |**Deploying Open-source LLMs Locally**|Open-source LLMs can be deployed for local use, offering flexibility and control over the model and its applications.|
-|**Fine-tuning Open-source LLMs**|Fine-tuning open-source LLMs to meet specific domain standards allows for tailored applications in particular fields. These fine-tuned models can then be deployed locally.
+|**Fine-tuning Open-source LLMs**|Fine-tuning open-source LLMs to meet specific domain standards allows for tailored applications in particular fields. These fine-tuned models can then be deployed locally.|
 
 In summary, LLMs are versatile tools used across diverse fields by designing prompts for zero-shot and few-shot learning, accessing proprietary APIs, deploying open-source models locally, or fine-tuning them for specialized applications. Incorporating chain-of-thought prompts and utilizing intermediate representations further enhance their usability in complex tasks and research.
 
